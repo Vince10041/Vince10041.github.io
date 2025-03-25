@@ -50,21 +50,21 @@ const About = () => {
           >
             <h3>Who I Am</h3>
             <p>
-              I am a passionate Software Developer with expertise in building web applications that deliver exceptional user experiences. With a solid foundation in both frontend and backend technologies, I enjoy turning complex problems into simple, beautiful, and intuitive solutions.
+              I am Vince, a software developer from the University of Hong Kong with Computer Science degree. I am a passionate and professional software developer who always strives to deliver the best solutions.
             </p>
             <p>
-              My journey in software development began with a curiosity about how things work, which evolved into a passion for creating digital experiences. I believe that continual learning and adaptation are key to success in this ever-evolving field.
+              Self-motivated and quick-learner has always been my characteristics. Being adaptive to new technologies and methodologies is one of my strengths. Makes me a great team player and tackle problems with a calm and collected manner.
             </p>
             <p>
-              When I'm not coding, you can find me exploring new technologies, contributing to open source projects, or enhancing my skills through online courses and technical literature.
+              Under the world of fast-paced and evolving software development, I am always eager to explore new technologies and equip myself with the latest skills. With the usage of new technologies, I am able to deliver the best and tailored product to my clients.
             </p>
             <div className={styles.skills}>
               <div className={styles.skill}>JavaScript</div>
-              <div className={styles.skill}>React</div>
-              <div className={styles.skill}>Node.js</div>
-              <div className={styles.skill}>Next.js</div>
+              <div className={styles.skill}>Python</div>
+              <div className={styles.skill}>SQL</div>
+              <div className={styles.skill}>Java</div>
               <div className={styles.skill}>HTML/CSS</div>
-              <div className={styles.skill}>MongoDB</div>
+              <div className={styles.skill}>No SQL</div>
             </div>
           </motion.div>
         </div>

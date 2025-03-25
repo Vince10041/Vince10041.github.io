@@ -75,9 +75,29 @@
   color: #555;
 }
 
+.textLink {
+  font-weight: 700;
+  text-decoration: underline;
+  color: var(--primary);
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.textLink:hover {
+  color: #8e2de2;
+}
+
 @media (prefers-color-scheme: dark) {
   .description {
     color: #bbb;
+  }
+  
+  .textLink {
+    color: #8e2de2;
+  }
+  
+  .textLink:hover {
+    color: #a64dff;
   }
 }
 

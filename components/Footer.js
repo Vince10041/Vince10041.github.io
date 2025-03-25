@@ -11,14 +11,14 @@ const Footer = () => {
       <div className={styles.container}>
         <div className={styles.content}>
           <div className={styles.logo}>
-            <h3>Portfolio</h3>
+            <h3>Vince Lam.</h3>
           </div>
           
           <div className={styles.socialLinks}>
-            <a href="https://github.com/" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+            <a href="https://github.com/Vince10041" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
               <FaGithub />
             </a>
-            <a href="https://linkedin.com/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+            <a href="https://www.linkedin.com/in/vince-lam-abb557234/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
               <FaLinkedin />
             </a>
             <a href="https://twitter.com/" target="_blank" rel="noopener noreferrer" aria-label="Twitter">

@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion';
 import Image from 'next/image';
+import Link from 'next/link';
 import { FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa';
 import styles from './Home.module.css';
 
@@ -45,7 +46,7 @@ const Home = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
           >
-            Welcome to my portfolio! I am a passionate software developer dedicated to creating elegant solutions to complex problems. With a strong focus on user experience and clean code, I strive to build applications that make a difference.
+            I am Vince, a software developer based in Hong Kong! Find out more <a className={styles.textLink} onClick={() => document.getElementById('about').scrollIntoView({ behavior: 'smooth' })}>about me</a> and <a className={styles.textLink} onClick={() => document.getElementById('work').scrollIntoView({ behavior: 'smooth' })}>my work</a> below.
           </motion.p>
           
           <motion.div 
@@ -54,10 +55,10 @@ const Home = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.6 }}
           >
-            <a href="https://github.com/" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+            <a href="https://github.com/Vince10041" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
               <FaGithub />
             </a>
-            <a href="https://linkedin.com/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+            <a href="https://www.linkedin.com/in/vince-lam-abb557234/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
               <FaLinkedin />
             </a>
             <a href="https://twitter.com/" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
