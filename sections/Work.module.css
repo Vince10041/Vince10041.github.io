@@ -1,0 +1,284 @@
+.work {
+  padding: 8rem 0;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.sectionHeader {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.sectionHeader h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.underline {
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, #4a00e0, #8e2de2);
+  margin: 0 auto;
+  border-radius: 2px;
+}
+
+.sliderContainer {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 2rem;
+}
+
+.projectsSlider {
+  display: flex;
+  overflow-x: hidden;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE/Edge */
+  width: 100%;
+}
+
+.projectsSlider::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
+
+.projectCard {
+  flex: 0 0 100%;
+  scroll-snap-align: start;
+  padding: 1rem;
+  transition: all 0.5s ease;
+  opacity: 0.7;
+  transform: scale(0.9);
+  cursor: pointer;
+}
+
+.projectCard.active {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.projectContent {
+  display: flex;
+  gap: 3rem;
+  background-color: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+  height: 400px;
+}
+
+@media (prefers-color-scheme: dark) {
+  .projectContent {
+    background-color: rgba(30, 30, 30, 0.5);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+  }
+}
+
+.projectImage {
+  flex: 1;
+  overflow: hidden;
+}
+
+.imagePlaceholder {
+  width: 100%;
+  height: 100%;
+  background-color: #f0f0f0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #666;
+  font-weight: 600;
+}
+
+.projectImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@media (prefers-color-scheme: dark) {
+  .imagePlaceholder {
+    background-color: #222;
+    color: #ccc;
+  }
+}
+
+.projectInfo {
+  flex: 1;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.projectInfo h3 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.projectInfo p {
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+  color: #555;
+}
+
+@media (prefers-color-scheme: dark) {
+  .projectInfo p {
+    color: #bbb;
+  }
+}
+
+.technologies {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: auto;
+}
+
+.technology {
+  padding: 0.25rem 0.8rem;
+  background: linear-gradient(135deg, #4a00e0 0%, #8e2de2 100%);
+  color: white;
+  border-radius: 50px;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.navButton {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(5px);
+  border: none;
+  border-radius: 50%;
+  color: var(--foreground);
+  font-size: 1.2rem;
+  cursor: pointer;
+  z-index: 10;
+  transition: all 0.3s ease;
+  opacity: 0.6;
+}
+
+.navButton:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+  opacity: 1;
+}
+
+@media (prefers-color-scheme: dark) {
+  .navButton {
+    background-color: rgba(50, 50, 50, 0.5);
+  }
+  
+  .navButton:hover {
+    background-color: rgba(70, 70, 70, 0.7);
+  }
+}
+
+.prevButton {
+  left: -25px;
+}
+
+.nextButton {
+  right: -25px;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 2rem;
+}
+
+.paginationDot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #ddd;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.paginationDot.active {
+  background: linear-gradient(135deg, #4a00e0 0%, #8e2de2 100%);
+  transform: scale(1.2);
+}
+
+@media (prefers-color-scheme: dark) {
+  .paginationDot {
+    background-color: #444;
+  }
+}
+
+@media (max-width: 992px) {
+  .projectContent {
+    flex-direction: column;
+    height: auto;
+  }
+  
+  .projectImage, .projectInfo {
+    flex: 1;
+  }
+  
+  .navButton {
+    width: 40px;
+    height: 40px;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .work {
+    padding: 6rem 0;
+  }
+  
+  .sectionHeader h2 {
+    font-size: 2.2rem;
+  }
+  
+  .projectInfo h3 {
+    font-size: 1.5rem;
+  }
+  
+  .projectInfo {
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .sectionHeader h2 {
+    font-size: 2rem;
+  }
+  
+  .prevButton {
+    left: -10px;
+  }
+  
+  .nextButton {
+    right: -10px;
+  }
+  
+  .navButton {
+    width: 35px;
+    height: 35px;
+    font-size: 0.9rem;
+  }
+} 
