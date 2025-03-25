@@ -9,31 +9,27 @@ import styles from './Work.module.css';
 const projects = [
   {
     id: 1,
-    title: 'E-Commerce Platform',
-    description: 'A full-featured e-commerce platform built with React, Node.js, and MongoDB. Features include product listings, shopping cart, user authentication, payment processing, and order management.',
+    title: 'Blockchain International Financial Asset System (BIFAS)',
+    description: 'A FYP project that aims to improve transaction time of blockchain and scalability while maintaining the advantages from using blockchain',
     image: '/images/project1.png',
-    technologies: ['React', 'Node.js', 'Express', 'MongoDB', 'Stripe API']
+    link: 'https://wp.cs.hku.hk/2022/fyp22009/',
+    technologies: ['Python', 'Blockchain']
   },
   {
     id: 2,
-    title: 'Social Media Dashboard',
-    description: 'A comprehensive social media dashboard for monitoring and analyzing social media performance. Includes real-time analytics, content scheduling, and engagement tracking.',
+    title: 'Grocery Helper',
+    description: 'A lightweight cross platform mobile application that helps users to record the price of groceries and visualize the price changes over time.',
     image: '/images/project1.png',
-    technologies: ['Vue.js', 'Firebase', 'Chart.js', 'Social Media APIs']
+    link: 'https://github.com/Vince10041/Grocery_Helper',
+    technologies: ['React.js', 'SQLite', 'Tailwind', 'Expo']
   },
   {
     id: 3,
-    title: 'Task Management App',
-    description: 'A collaborative task management application that helps teams organize and track their work. Features include task assignment, progress tracking, deadline notifications, and team chat.',
+    title: 'Tutor Today',
+    description: 'A tutor matching platform in both mobile version (Android: Java, SQLite) and web application (ReactJS, MongoDB)',
     image: '/images/project1.png',
-    technologies: ['React', 'Redux', 'Node.js', 'Socket.io', 'PostgreSQL']
-  },
-  {
-    id: 4,
-    title: 'Fitness Tracking App',
-    description: 'A mobile application for tracking fitness activities, setting goals, and monitoring progress. Includes workout plans, nutrition tracking, and progress analytics.',
-    image: '/images/project1.png',
-    technologies: ['React Native', 'Firebase', 'Health APIs', 'D3.js']
+    link: 'https://wp2023.cs.hku.hk/fyp23007/',
+    technologies: ['Java', 'SQL', 'React.js', 'MongoDB']
   }
 ];
 
@@ -117,6 +113,16 @@ const Work = () => {
                   <div className={styles.projectInfo}>
                     <h3>{project.title}</h3>
                     <p>{project.description}</p>
+                    {project.link && (
+                      <a 
+                        href={project.link} 
+                        target="_blank" 
+                        rel="noopener noreferrer" 
+                        className={styles.projectLink}
+                      >
+                        View Project
+                      </a>
+                    )}
                     <div className={styles.technologies}>
                       {project.technologies.map((tech, i) => (
                         <span key={i} className={styles.technology}>{tech}</span>

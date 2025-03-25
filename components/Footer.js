@@ -29,10 +29,7 @@ const Footer = () => {
         
         <div className={styles.copyright}>
           <p>
-            &copy; {currentYear} Portfolio. All rights reserved.
-          </p>
-          <p className={styles.madeWith}>
-            Made with <FaHeart className={styles.heart} /> using Next.js
+            &copy; {currentYear} Vince Lam. All rights reserved.
           </p>
         </div>
       </div>

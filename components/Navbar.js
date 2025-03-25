@@ -53,7 +53,7 @@ const Navbar = () => {
   return (
     <nav className={`${styles.navbar} ${scrolled ? styles.scrolled : ''}`}>
       <div className={styles.logo}>
-        <Link href="/">Portfolio</Link>
+        <Link href="/">Vince Lam.</Link>
       </div>
       <motion.div 
         className={styles.navLinks}
